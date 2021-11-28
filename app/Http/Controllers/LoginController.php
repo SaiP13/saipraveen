@@ -68,6 +68,10 @@ class LoginController extends Controller
 
 
     }
+    public function forgot_password()
+    {
+        return view('auth.forgot-password');
+    }
 
     public function logout()
     {

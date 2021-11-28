@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -11,11 +11,13 @@ class AdminController extends Controller
     {
 
 
-        if(Auth::check()){
-            return view('admin.index');
-        }
+        // if(Auth::check()){
+        //     return view('admin.index');
+        // }
 
-        return redirect("login")->withSuccess('You are not allowed to access');
+        return view('admin.index');
+
+        // return redirect("/")->withSuccess('You are not allowed to access');
     }
 
 
