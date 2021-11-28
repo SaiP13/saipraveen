@@ -1,7 +1,6 @@
 <section id="footer">
     <div class="footer container">
       <div class="brand"><h1><span>S </span> a i &nbsp;<span>   P </span>r a v e e n</h1></div>
-      <h2></h2>
       <div class="social-icon">
         <div class="social-item">
           <a href="https://www.facebook.com/SAI.MLA/" target="_blank"><img src="{{ url('images/facebook-new.png') }}"/></a>
@@ -16,5 +15,4 @@
       <p>Copyright © 2021. All rights reserved!</p>
     </div>
   </section>
-
   <script src="{{ url('js/jscript.js')}}"></script>

@@ -25,9 +25,13 @@ Route::get('project', [HomeController::class, 'project']);
 
 //end home routes
 
+//admin routes
+
 Route::get('admin', [AdminController::class, 'index']);
-
-
+Route::get('admin/projects', [AdminController::class, 'projects']);
+Route::get('admin/blogs', [AdminController::class, 'blogs']);
+Route::get('admin/subscribers', [AdminController::class, 'subscribers']);
+Route::post('admin/store-subscribers', [AdminController::class, 'strore_subscribers']);
 //Auth
 Route::get('login', [LoginController::class, 'login']);
 Route::post('login', [LoginController::class, 'login_action']);

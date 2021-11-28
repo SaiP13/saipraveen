@@ -90,7 +90,7 @@ p {
 	background-color: rgba(14, 13, 13, 0.308);
 }
 #header .header {
-	min-height: 6vh;
+	min-height: 8vh;
 	background-color: rgba(10, 10, 10, 0.24);
 	transition: .10s ease background-color;
 }
@@ -101,14 +101,14 @@ p {
 	width: 100%;
 	height: 100%;
 	max-width: 1300px;
-	padding: 0 6px;
+	padding: 0 10px;
 }
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
 	background-color: rgb(31, 30, 30);
 	width: 100vw;
-	height: 50vh;
+	height: 100vh;
 	left: 100%;
 	top: 0;
 	display: flex;
@@ -123,7 +123,7 @@ p {
 	left: 0%;
 }
 #header .nav-list ul a {
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	font-weight: 500;
 	letter-spacing: .2rem;
 	text-decoration: none;
@@ -544,9 +544,10 @@ p {
 	background-image: linear-gradient(60deg, #000000 0%, #6c0c85 100%);
 }
 #footer .footer {
-	min-height: 1px;
+	min-height: 100px;
 	flex-direction: column;
-	padding-top: 20px;
+	padding-top: 40px;
+	padding-bottom: 5px;
 }
 #footer h2 {
 	color: white;
@@ -558,8 +559,7 @@ p {
 }
 #footer .social-icon {
 	display: flex;
-	margin-bottom: 4px;
-
+	margin-bottom: 30px;
 }
 #footer .social-item {
 	height: 50px;
@@ -690,10 +690,10 @@ p {
 	/* contact  */
 	#contact .contact {
 		flex-direction: column;
-		padding: 100px 0;
+		padding: 60px 0;
 		align-items: center;
 		justify-content: center;
-		min-width: 20vh;
+		/* min-width: 10vh; */
 	}
 	#contact .contact-items {
 		width: 100%;
