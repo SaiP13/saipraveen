@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +14,22 @@ use App\Http\Controllers\LoginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//home routes
+
+Route::get('/', [HomeController::class, 'index']);
+Route::get('about', [HomeController::class, 'about']);
+Route::get('blog', [HomeController::class, 'blog']);
+Route::get('contact', [HomeController::class, 'contact']);
+Route::get('project', [HomeController::class, 'project']);
+
+
+//end home routes
 
 Route::get('admin', [AdminController::class, 'index']);
 
 
 //Auth
-Route::get('/', [LoginController::class, 'login']);
+Route::get('login', [LoginController::class, 'login']);
 Route::post('login', [LoginController::class, 'login_action']);
 
 Route::get('forgot-password', [LoginController::class, 'forgot_password']);
