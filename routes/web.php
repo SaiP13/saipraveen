@@ -14,14 +14,16 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 //home routes
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('about', [HomeController::class, 'about']);
 Route::get('blog', [HomeController::class, 'blog']);
 Route::get('contact', [HomeController::class, 'contact']);
+Route::post('store-subscribers', [HomeController::class, 'store_subscribers']);
+Route::post('store-feedback', [HomeController::class, 'store_feedback']);
 Route::get('project', [HomeController::class, 'project']);
-
 
 //end home routes
 
@@ -31,7 +33,6 @@ Route::get('admin', [AdminController::class, 'index']);
 Route::get('admin/projects', [AdminController::class, 'projects']);
 Route::get('admin/blogs', [AdminController::class, 'blogs']);
 Route::get('admin/subscribers', [AdminController::class, 'subscribers']);
-Route::post('admin/store-subscribers', [AdminController::class, 'strore_subscribers']);
 //Auth
 Route::get('login', [LoginController::class, 'login']);
 Route::post('login', [LoginController::class, 'login_action']);

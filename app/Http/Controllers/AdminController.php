@@ -32,30 +32,4 @@ class AdminController extends Controller
     {
         return view('admin.subscribers');
     }
-
-    public function strore_subscribers(Request $request)
-    {
-        $validator = \Validator::make($request->all(),[
-            'email' => 'required',
-        ]);
-
-        if($validator->fails()){
-            return response()->json(['errors'=>$validator->errors()], 200);
-        }
-
-        $data['email'] = $request->email;
-        $data['created_at'] = date('Y-m-d H:i:s');
-
-        $result = DB::table('subscribers')->insert($data);
-
-        if($result){
-            return response()->json(['success'=>"Successfully Registered!"], 200);
-        } else {
-            return response()->json(['failed'=>"Failed! Try Again"], 200);
-        }
-
-
-    }
-
-
 }
