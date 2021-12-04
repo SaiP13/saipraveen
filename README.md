@@ -5,4 +5,4 @@
 
 ## License
 
-Theis open-sourced project.
+This is open-source project.
