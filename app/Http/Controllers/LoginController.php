@@ -28,11 +28,11 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-
-            return redirect()->intended('admin')->withSuccess('Logged-in');
-
+            // dd(Auth::user());
+            // return redirect()->intended('admin');
+            return response()->json(['status'=>"success"], 200);
         } else {
-            return response()->json(['status'=>"Invalid Creditinals!"], 200);
+            return response()->json(['status'=>"failed"], 200);
         }
 
 
@@ -55,14 +55,13 @@ class LoginController extends Controller
             return response()->json(['errors'=>$validator->errors()], 200);
         }
 
-        $data['name'] = $request->first_name." ".$request->last_name;
+        $data['user_name'] = $request->first_name." ".$request->last_name;
         $data['email'] = $request->email;
         $data['password'] = \Hash::make($request->password);
 
-        $result = User::create($data);
+        $result = User::insert($data);
 
-        if($result)
-        {
+        if($result){
             return response()->json(['status'=>"Successfully Registered!"], 200);
         }
 

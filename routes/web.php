@@ -28,17 +28,19 @@ Route::get('project', [HomeController::class, 'project']);
 //end home routes
 
 //admin routes
+Route::middleware('auth')->group(function () {
+    Route::get('admin', [AdminController::class, 'index']);
+    Route::get('admin/projects', [AdminController::class, 'projects']);
+    Route::get('admin/blogs', [AdminController::class, 'blogs']);
+    Route::get('admin/subscribers', [AdminController::class, 'subscribers']);
+    Route::get('admin/profile', [AdminController::class, 'profile']);
 
-Route::get('admin', [AdminController::class, 'index']);
-Route::get('admin/projects', [AdminController::class, 'projects']);
-Route::get('admin/blogs', [AdminController::class, 'blogs']);
-Route::get('admin/subscribers', [AdminController::class, 'subscribers']);
+});
 //Auth
 Route::get('login', [LoginController::class, 'login']);
 Route::post('login', [LoginController::class, 'login_action']);
 
 Route::get('forgot-password', [LoginController::class, 'forgot_password']);
-
 Route::get('logout', [LoginController::class, 'logout']);
 Route::get('register', [LoginController::class, 'register']);
 Route::post('register', [LoginController::class, 'register_action']);

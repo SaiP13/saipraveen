@@ -26,6 +26,14 @@
 
                     <!-- Page Heading -->
                     <!-- DataTales Example -->
+                    <nav aria-label="breadcrumb" class="main-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{url('admin')}}">Dashboard</a></li>
+                            {{-- <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li> --}}
+                            <li class="breadcrumb-item active" aria-current="page">Projects</li>
+                        </ol>
+                    </nav>
+                    <!-- /Breadcrumb -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Projects</h6>

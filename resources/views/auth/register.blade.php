@@ -79,10 +79,10 @@
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    <a class="small" href="{{url('forgot-password')}}">Forgot Password?</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="login.html">Already have an account? Login!</a>
+                                    <a class="small" href="{{url('login')}}">Already have an account? Login!</a>
                                 </div>
                             </div>
                         </div>
@@ -116,12 +116,18 @@
                             $.each(data.errors, function (key, value) {
                                 errors += "\n" + value + "\n";
                             });
-
                             swal({
                                 title: "Info",
                                 text: errors,
                                 type: "error",
                             });
+                        } else {
+                            swal({
+                                title: "Success!",
+                                text: "Account Successfully Created!",
+                                type: "success",
+                            });
+                            window.location.href="{{url('login')}}";
                         }
 
                     }

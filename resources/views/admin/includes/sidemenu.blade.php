@@ -2,10 +2,11 @@
  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        {{-- <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
-        </div> --}}
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{url('admin')}}">
+        <div class="sidebar-brand-icon">
+            {{-- <i class="fas fa-laugh-wink"></i> --}}
+            <i class="fas fa-user-secret"></i>
+        </div>
         <div class="sidebar-brand-text mx-3">SAI Admin<sup></sup></div>
     </a>
 
@@ -38,13 +39,13 @@
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="{{url('admin/blogs')}}" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
+            <i class="fas fa-blog"></i>
             <span>Blogs</span>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link collapsed" href="{{url('admin/subscribers')}}" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
+            <i class="fas fa-users"></i>
             <span>Subscribers</span>
         </a>
     </li>

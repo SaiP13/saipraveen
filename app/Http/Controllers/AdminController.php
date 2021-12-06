@@ -11,14 +11,11 @@ class AdminController extends Controller
     public function index()
     {
 
-
-        // if(Auth::check()){
-        //     return view('admin.index');
-        // }
-
-        return view('admin.index');
-
-        // return redirect("/")->withSuccess('You are not allowed to access');
+        // dd(Auth::user()->user_name);
+        if(Auth::check()){
+            return view('admin.index');
+        }
+        return redirect("login");
     }
     public function projects()
     {
@@ -31,5 +28,9 @@ class AdminController extends Controller
     public function subscribers()
     {
         return view('admin.subscribers');
+    }
+    public function profile()
+    {
+        return view('admin.profile');
     }
 }
